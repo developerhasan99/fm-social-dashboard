@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+//Import Context
+import Context from "../../context/darkContext";
 
 const Wrapper = styled.div`
   display: flex;
@@ -50,7 +53,8 @@ const Dot = styled.span`
   `}
 `;
 
-function DarkModeBtn({ isDark, handleClick }) {
+function DarkModeBtn() {
+  const { isDark, handleClick } = useContext(Context);
   return (
     <Wrapper>
       <Label isDark={isDark}>Dark Mode</Label>

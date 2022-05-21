@@ -1,4 +1,6 @@
 import styled from "@emotion/styled";
+import { useContext } from "react";
+import Context from "../../context/darkContext";
 import Container from "../Commons/Container";
 import DarkModeBtn from "./DarkModeBtn";
 
@@ -39,7 +41,8 @@ const SubHeading = styled.h2`
   `}
 `;
 
-function Header({ isDark, handleClick }) {
+function Header() {
+  const { isDark } = useContext(Context);
   return (
     <Wrapper isDark={isDark}>
       <Container>
@@ -48,7 +51,7 @@ function Header({ isDark, handleClick }) {
             <Heading isDark={isDark}>Social Media Dashboard</Heading>
             <SubHeading isDark={isDark}>Total Followers: 23,004</SubHeading>
           </div>
-          <DarkModeBtn isDark={isDark} handleClick={handleClick} />
+          <DarkModeBtn />
         </Flex>
       </Container>
     </Wrapper>
