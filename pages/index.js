@@ -19,7 +19,6 @@ export default function Home() {
 
   const handleClick = () => {
     setDark(!isDark);
-    console.log("Iam clicked");
   };
 
   return (
