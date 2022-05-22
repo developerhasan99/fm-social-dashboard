@@ -20,8 +20,12 @@ const P = styled.p`
   }
 `;
 
-function Stat({ isUp, todayStat }) {
-  return <P isUp={isUp}>Today {todayStat}</P>;
+function Stat({ isUp, todayStat, style }) {
+  return (
+    <P style={style} isUp={isUp}>
+      {todayStat}
+    </P>
+  );
 }
 
 export default Stat;

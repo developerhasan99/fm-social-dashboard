@@ -2,12 +2,19 @@ import styled from "@emotion/styled";
 import { useContext } from "react";
 //Import Context
 import Context from "../../context/darkContext";
+import colors from "../../utils/colors";
 
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 20px;
+  @media (max-width: 767px) {
+    margin-top: 1.5rem;
+    padding-top: 0.5rem;
+    border-top: #7773 1px solid;
+    justify-content: space-between;
+  }
 `;
 
 const Label = styled.p`
@@ -22,7 +29,7 @@ const Label = styled.p`
 
 const Button = styled.button`
   border: 0;
-  background: hsl(230, 22%, 74%);
+  background: ${colors.bgGray};
   height: 24px;
   width: 45px;
   border-radius: 20px;

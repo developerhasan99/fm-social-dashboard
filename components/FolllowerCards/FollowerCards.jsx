@@ -17,28 +17,28 @@ function FollowerCards() {
             name="facebook"
             userName="nathanf"
             followersCount="1987"
-            todayStat="12"
+            todayStat="Today 12"
             isUp={true}
           />
           <Card
             name="twitter"
             userName="nathanf"
             followersCount="1044"
-            todayStat="99"
+            todayStat="Today 99"
             isUp={true}
           />
           <Card
             name="instagram"
             userName="nathanf"
             followersCount="11k"
-            todayStat="1099"
+            todayStat="Today 1099"
             isUp={true}
           />
           <Card
             name="youtube"
             userName="Nathan F."
             followersCount="8239"
-            todayStat="144"
+            todayStat="Today 144"
             isUp={false}
           />
         </Row>

@@ -9,9 +9,11 @@ import Col from "../Commons/Col";
 import Username from "./Username";
 import FollowersCount from "./FollowersCount";
 import Followers from "./Followers";
-import Stat from "./Stat";
+import Stat from "../Commons/Stat";
 
-const Div = styled.div`
+const A = styled.a`
+  display: block;
+  cursor: pointer;
   padding: 15px;
   background: ${(props) => (props.isDark ? colors.cardBgDark : colors.cardBg)};
   text-align: center;
@@ -19,6 +21,10 @@ const Div = styled.div`
   border-top: ${(props) => colors[props.name]} 4px solid;
   position: relative;
   margin-bottom: 1.5rem;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    background: ${(props) => (props.isDark ? "#353a55" : "#e2e3f0")};
+  }
   ${(props) =>
     props.name === "instagram" &&
     `
@@ -42,12 +48,12 @@ function Card({ name, userName, followersCount, todayStat, isUp }) {
 
   return (
     <Col>
-      <Div name={name} isDark={isDark}>
+      <A href="#" name={name} isDark={isDark}>
         <Username name={name} username={userName} />
         <FollowersCount followersCount={followersCount} />
         <Followers name={name} />
         <Stat isUp={isUp} todayStat={todayStat} />
-      </Div>
+      </A>
     </Col>
   );
 }

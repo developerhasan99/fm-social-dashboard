@@ -6,6 +6,7 @@ const colors = {
   instagram: "linear-gradient(to right ,hsl(37, 97%, 70%), hsl(329, 70%, 58%))",
   youtube: "hsl(348, 97%, 39%)",
   bgLight: "hsl(0, 0%, 100%)",
+  bgGray: "hsl(230, 22%, 74%)",
   bgDark: "hsl(230, 17%, 14%)",
   topBg: "hsl(225, 100%, 98%)",
   topBgDark: "hsl(232, 19%, 15%)",

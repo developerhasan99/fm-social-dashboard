@@ -4,6 +4,8 @@ import SeoHead from "../components/seo-head";
 import { useState } from "react";
 import styled from "@emotion/styled";
 import Context from "../context/darkContext";
+import Overview from "../components/Overview/Overview";
+import Credit from "../components/Credit";
 
 const Root = styled.div`
   transition: 0.3s ease-in-out;
@@ -26,20 +28,8 @@ export default function Home() {
         <SeoHead />
         <Header isDark={isDark} handleClick={handleClick} />
         <FollowerCards />
-        Today Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257%
-        Profile Views 52k 1375% Retweets 117 303% Likes 507 553% Likes 107 19%
-        Total Views 1407 12%
-        <div>
-          Challenge by{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.frontendmentor.io?ref=challenge"
-          >
-            Frontend Mentor
-          </a>
-          . Coded by <a href="#">Your Name Here</a>.
-        </div>
+        <Overview />
+        <Credit />
       </Root>
     </Context.Provider>
   );
